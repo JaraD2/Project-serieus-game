@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const house2 = document.getElementById('house2');
   const house3 = document.getElementById('house3');
   const houses = [house1, house2, house3];
+  const back = document.getElementById('back');
+  var previous = background.getAttribute('src');
 
   house1.addEventListener('click', function() {
       console.log('house1');
+      previous = background.getAttribute('src');
+      console.log(previous);
       background.setAttribute('src', './img/er.png');
       hideOrShowHouses('hide');
   });
@@ -16,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
   house3.addEventListener('click', function() {
       console.log('house3');
   });
+
+  back.addEventListener('click', function() {
+      console.log('back');
+      background.setAttribute('src', previous);
+      hideOrShowHouses('show');
+  });
+
 
 
   function hideOrShowHouses(option) {
