@@ -1,0 +1,10 @@
+{
+    "char1" : {
+        "1" : "Char1 Hello",
+        "2" : "Char1 Hello2"
+    },
+    "char2" : {
+        "1" : "Char2 Hello",
+        "2" : "Char2 Hello2"
+    }
+}
