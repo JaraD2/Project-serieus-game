@@ -13,17 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     previous = background.getAttribute("src");
     background.setAttribute("src", "./img/er.png");
     location = 1;
+    i = 1;
     hideOrShowHouses("hide");
     textAnimation(location);
   });
 
   house2.addEventListener("click", function () {
     location = 2;
+    i = 1;
     textAnimation(location);
   });
 
   house3.addEventListener("click", function () {
     location = 3;
+    i = 1;
     textAnimation(location);
   });
 
