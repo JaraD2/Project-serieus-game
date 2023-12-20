@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let location = 0;
   const next = document.getElementById("next");
   const displayedText = document.getElementById("displayedText");
+  const text = document.getElementById("text");
 
   house1.addEventListener("click", function () {
     previous = background.getAttribute("src");
@@ -34,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     background.setAttribute("src", previous);
     hideOrShowHouses("show");
     displayedText.textContent = "";
+    if (location == 0) {
+      back.setAttribute("href", "./index.html");
+
+    } else {
+    }
+    location = 0;
   });
 
   function hideOrShowHouses(option) {
@@ -58,29 +65,33 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Error fetching JSON:", error);
     });
 
-  
-    var i = 1;
-    next.addEventListener("click", function () {
-      console.log(jsonData[`char${location}`][`${i}`]);
-      i++;
-      textAnimation(location);
-    });
-    function textAnimation(currentLocation) {
-      console.log(jsonData);
-      if (jsonData) {
-        const text = jsonData[`char${currentLocation}`][`${i}`].split("");
-        displayedText.textContent = ""; // Clear previous text
-        let j = 0;
-        const timer = setInterval(function () {
-          if (j < text.length) {
-            displayedText.textContent += text[j];
-            j++;
-          } else {
-            clearInterval(timer);
-          }
-        }, 75);
-      }
-    
+  var i = 1;
+  next.addEventListener("click", function () {
+    console.log(jsonData[`char${location}`][`${i}`]);
+    i++;
+    if (i == 3) {
+      // needs to be the number of text lines +1
+      // if all text lines would be equal to 3, then this would be 4
+      console.log("end of text");
+      text.style.display = "none";
+    }
+    textAnimation(location);
+  });
+  function textAnimation(currentLocation) {
+    console.log(jsonData);
+    if (jsonData) {
+      const text = jsonData[`char${currentLocation}`][`${i}`].split("");
+      displayedText.textContent = ""; // Clear previous text
+      let j = 0;
+      var timer = setInterval(function () {
+        if (j < text.length) {
+          displayedText.textContent += text[j];
+          j++;
+        } else {
+          clearInterval(timer);
+        }
+      }, 75);
+    }
   }
   function specialEffects(element, effect) {
     element.classList.toggle(effect);
