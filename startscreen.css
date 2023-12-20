@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  color: aliceblue;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("./img/background.png");
+}
+h1 {
+  place-self: center;
+}
+.buttons {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 0px;
+  background-image: url("./img//boards.png");
+}
+
+.buttons > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid rgb(8, 131, 63);
+  background-color: rgb(8, 131, 63);
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
