@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const text = document.getElementById("text");
 
   house1.addEventListener("click", function () {
-    previous = background.getAttribute("src");
     background.setAttribute("src", "./img/er.png");
     location = 1;
     i = 1;
@@ -20,14 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   house2.addEventListener("click", function () {
+    background.setAttribute("src", "./img/er.png");
     location = 2;
     i = 1;
+    hideOrShowHouses("hide");
     textAnimation(location);
   });
 
   house3.addEventListener("click", function () {
+    background.setAttribute("src", "./img/er.png");
     location = 3;
     i = 1;
+    hideOrShowHouses("hide");
     textAnimation(location);
   });
 
@@ -37,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     displayedText.textContent = "";
     if (location == 0) {
       back.setAttribute("href", "./index.html");
-
     } else {
     }
     location = 0;
@@ -54,16 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  let jsonData;
-  fetch("./text.json")
-    .then((response) => response.json())
-    .then((data) => {
-      jsonData = data;
-      console.log(jsonData);
-    })
-    .catch((error) => {
-      console.log("Error fetching JSON:", error);
-    });
+// Declare a variable to store the JSON data so it can be used outside of the fetch function
+let jsonData;
+// Fetch the JSON data from the specified file ("text.json")
+fetch("./text.json")
+  // If the fetch is successful, convert the response to JSON
+  .then((response) => response.json())
+  // If the conversion to JSON is successful, call the function
+  .then((data) => {
+    // Assign the JSON data to the jsonData variable
+    jsonData = data;
+    // Log the jsonData to the console (for debugging purposes)
+    console.log(jsonData);
+  })
+  // If there's an error during the fetch, log the error message to the console
+  .catch((error) => {
+    console.log("Error fetching JSON:", error);
+  });
+
 
   var i = 1;
   next.addEventListener("click", function () {
@@ -77,10 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     textAnimation(location);
   });
+
   function textAnimation(currentLocation) {
     console.log(jsonData);
     if (jsonData) {
-      const text = jsonData[`char${currentLocation}`][`${i}`].split("");
+      const text = jsonData[`char${currentLocation}`][`${i}`].split(""); // splits the text at every character
       displayedText.textContent = ""; // Clear previous text
       let j = 0;
       var timer = setInterval(function () {
@@ -93,10 +104,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 75);
     }
   }
-  function specialEffects(element, effect) {
-    element.classList.toggle(effect);
-    setTimeout(function () {
-      element.classList.toggle(effect);
-    }, 1000);
-  }
+  
+
+
+  // possible special effects
+  // function specialEffects(element, effect) {
+  //   element.classList.toggle(effect);
+  //   setTimeout(function () {
+  //     element.classList.toggle(effect);
+  //   }, 1000);
+  // }
 });
