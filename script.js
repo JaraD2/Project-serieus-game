@@ -4,13 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const house2 = document.getElementById("house2");
   const house3 = document.getElementById("house3");
   const back = document.getElementById("back");
-  let previous = background.getAttribute("src");
-  let location = 0;
-  var i = 1;
   const next = document.getElementById("next");
   const displayedText = document.getElementById("displayedText");
   const text = document.getElementById("text");
   const character = document.getElementsByClassName("character")[0];
+  const characterImg = document.getElementById("character-image");
+
+  let previous = background.getAttribute("src");
+  let location = 0;
+  var i = 1;
 
   house1.addEventListener("click", function () {
     background.setAttribute("src", "./img/er.png");
@@ -25,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     background.setAttribute("src", "./img/er.png");
     location = 2;
     i = 1;
+    character.style.display = "grid";
+    characterImg.setAttribute("src", "./img/character/char2.png");
     hideOrShowHouses("hide");
     textAnimation(location);
   });
@@ -33,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     background.setAttribute("src", "./img/er.png");
     location = 3;
     i = 1;
+    character.style.display = "grid";
+    
     hideOrShowHouses("hide");
     textAnimation(location);
   });
