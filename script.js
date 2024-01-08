@@ -6,16 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const back = document.getElementById("back");
   let previous = background.getAttribute("src");
   let location = 0;
+  var i = 1;
   const next = document.getElementById("next");
   const displayedText = document.getElementById("displayedText");
   const text = document.getElementById("text");
   const character = document.getElementsByClassName("character")[0];
-  
+
   house1.addEventListener("click", function () {
     background.setAttribute("src", "./img/er.png");
     location = 1;
     i = 1;
-    console.log(character);
     character.style.display = "grid";
     hideOrShowHouses("hide");
     textAnimation(location);
@@ -59,42 +59,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-// Declare a variable to store the JSON data so it can be used outside of the fetch function
-let jsonData;
-// Fetch the JSON data from the specified file ("text.json")
-fetch("./text.json")
-  // If the fetch is successful, convert the response to JSON
-  .then((response) => response.json())
-  // If the conversion to JSON is successful, call the function
-  .then((data) => {
-    // Assign the JSON data to the jsonData variable
-    jsonData = data;
-    // Log the jsonData to the console (for debugging purposes)
-    console.log(jsonData);
-  })
-  // If there's an error during the fetch, log the error message to the console
-  .catch((error) => {
-    console.log("Error fetching JSON:", error);
-  });
+  // Declare a variable to store the JSON data so it can be used outside of the fetch function
+  let jsonData;
+  // Fetch the JSON data from the specified file ("text.json")
+  fetch("./text.json")
+    // If the fetch is successful, convert the response to JSON
+    .then((response) => response.json())
+    // If the conversion to JSON is successful, call the function
+    .then((data) => {
+      // Assign the JSON data to the jsonData variable
+      jsonData = data;
+      // Log the jsonData to the console (for debugging purposes)
+      console.log(jsonData);
+    })
+    // If there's an error during the fetch, log the error message to the console
+    .catch((error) => {
+      console.log("Error fetching JSON:", error);
+    });
 
-
-  var i = 1;
   next.addEventListener("click", function () {
-    console.log(jsonData[`char${location}`][`${i}`]);
     i++;
-    if (i == 3) {
-      // needs to be the number of text lines +1
-      // if all text lines would be equal to 3, then this would be 4
-      console.log("end of text");
-      text.style.display = "none";
-    }
     textAnimation(location);
   });
 
   function textAnimation(currentLocation) {
-    console.log(jsonData);
-    if (jsonData) {
-      const text = jsonData[`char${currentLocation}`][`${i}`].split(""); // splits the text at every character
+    // check how many items are in the given character's array
+    // if the current index is greater than the number of items in the object, then stop
+    // otherwise, continue
+    text.style.display = "grid";
+    console.log(i)
+    const characterData = jsonData[`char${currentLocation}`];
+    const characterKeys = Object.keys(characterData);
+    const totalItems = characterKeys.length;
+    //reached
+    if (i <= totalItems) {
+      const text = characterData[i].split(""); // splits the text at every character
       displayedText.textContent = ""; // Clear previous text
       let j = 0;
       var timer = setInterval(function () {
@@ -104,11 +103,13 @@ fetch("./text.json")
         } else {
           clearInterval(timer);
         }
-      }, 75);
+      }, 25);
+    } else {
+      i = 1;
+      console.log("End of character's text");
+      text.style.display = "none";
     }
   }
-  
-
 
   // possible special effects
   function specialEffects(element, effect) {
