@@ -9,12 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const next = document.getElementById("next");
   const displayedText = document.getElementById("displayedText");
   const text = document.getElementById("text");
-
+  const character = document.getElementsByClassName("character")[0];
+  
   house1.addEventListener("click", function () {
     previous = background.getAttribute("src");
     background.setAttribute("src", "./img/er.png");
     location = 1;
     i = 1;
+    console.log(character);
+    character.style.display = "grid";
     hideOrShowHouses("hide");
     textAnimation(location);
   });
@@ -37,10 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     displayedText.textContent = "";
     if (location == 0) {
       back.setAttribute("href", "./index.html");
-
-    } else {
     }
     location = 0;
+    character.style.display = "none";
   });
 
   function hideOrShowHouses(option) {
