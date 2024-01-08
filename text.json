@@ -1,7 +1,15 @@
 {
-    "char1" : {
-        "1" : "Char1 Hello",
-        "2" : "Char1 Hello2"
+    "char1": {
+        "1": "Hi there, I'm Joe.",
+        "2": "I lost all my money on Fortnite skins.",
+        "3": "I'm so sad.",
+        "4": "I realized that I could not buy food anymore.",
+        "5": "I used to enjoy playing games, but now it feels like a constant struggle.",
+        "6": "My friends kept buying more in-game items, but I couldn't keep up.",
+        "7": "I felt left out and isolated from my friends because I couldn't afford the same things.",
+        "8": "I started regretting spending so much money on virtual items.",
+        "9": "I wish I had thought about the consequences before making those purchases.",
+        "10": "It's tough to see others enjoying the game while I'm struggling financially."
     },
     "char2" : {
         "1" : "Char2 Hello",
