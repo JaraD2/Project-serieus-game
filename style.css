@@ -66,6 +66,9 @@ body, html {
     height: auto;
     margin-right: 20px; /
 }
+#house2, #house3, #house4 {
+    margin-top: 15px;
+}
 .back {
     position: absolute;
     top: 20px;

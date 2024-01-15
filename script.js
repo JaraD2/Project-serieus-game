@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     location = 1;
     i = 1;
     character.style.display = "grid";
+    characterImg.setAttribute("src", `./img/character/char${location}.png`);
     hideOrShowHouses("hide");
     textAnimation(location);
   });
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     location = 2;
     i = 1;
     character.style.display = "grid";
-    characterImg.setAttribute("src", "./img/character/char2.png");
+    characterImg.setAttribute("src", `./img/character/char${location}.png`);
     hideOrShowHouses("hide");
     textAnimation(location);
   });
@@ -38,7 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
     location = 3;
     i = 1;
     character.style.display = "grid";
-    
+    characterImg.setAttribute("src", `./img/character/char${location}.png`);
+    hideOrShowHouses("hide");
+    textAnimation(location);
+  });
+  house4.addEventListener("click", function () {
+    background.setAttribute("src", "./img/er.png");
+    location = 4;
+    i = 1;
+    character.style.display = "grid";
+    characterImg.setAttribute("src", `./img/character/char${location}.png`);
     hideOrShowHouses("hide");
     textAnimation(location);
   });
@@ -55,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function hideOrShowHouses(option) {
-    const houses = [house1, house2, house3];
+    const houses = [house1, house2, house3, house4];
     houses.forEach((house) => {
       if (option === "hide") {
         house.classList.add("hidden");
@@ -93,11 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // if the current index is greater than the number of items in the object, then stop
     // otherwise, continue
     text.style.display = "grid";
-    console.log(i)
+    console.log(i);
     const characterData = jsonData[`char${currentLocation}`];
     const characterKeys = Object.keys(characterData);
     const totalItems = characterKeys.length;
-    //reached
     if (i <= totalItems) {
       const text = characterData[i].split(""); // splits the text at every character
       displayedText.textContent = ""; // Clear previous text
