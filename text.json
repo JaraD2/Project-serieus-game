@@ -14,5 +14,13 @@
     "char2" : {
         "1" : "Char2 Hello",
         "2" : "Char2 Hello2"
+    },
+    "char3" : {
+        "1" : "Char3 Hello",
+        "2" : "Char3 Hello2"
+    },
+    "char4" : {
+        "1" : "Char4 Hello",
+        "2" : "Char4 Hello2"
     }
 }
