@@ -1,36 +1,43 @@
 body {
-  display: grid;
-  color: aliceblue;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-image: url("./img/background.png");
+  background-image: url("./img/backgroundFlowers.png");
 }
-h1 {
-  place-self: center;
+.button-container {
+  width: 250px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.buttons {
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 20px;
-  display: grid;
+
+.menu-button {
+  background: #2ecc71;
+  height: 7vh;
+  width: 210px;
+  border: none;
+  border-radius: 5px;
+  filter: drop-shadow(0.2vh 0.2vh 0px #17b55a) drop-shadow(0.4vh 0.4vh 0px #17b55a);
+  color: #fff;
+  font-weight: 900;
+  font-size: 3vh;
+  margin: 20px;
+  -webkit-box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
+  -moz-box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
+  box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
+}
+
+.menu-button:hover {
+  filter: drop-shadow(0.2vh 0.2vh 0px #17b55a) drop-shadow(0.4vh 0.4vh 0px #17b55a) drop-shadow(0.6vh 0.6vh 0px #17b55a);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.button-container > h1 {
   text-align: center;
-  width: 400px;
-  margin: auto;
-  margin-top: 0px;
-  background-image: url("./img//boards.png");
+  font-size: 5vh;
+  color: #fff;
 }
-
-.buttons > a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px;
-  border: 2px solid rgb(8, 131, 63);
-  background-color: rgb(8, 131, 63);
-  border-radius: 10px;
-  margin: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
+.logo {
+  width: 120px;
+  margin: 0 auto; /* Center the logo horizontally */
+  display: block; /* Ensure it's a block element for margin to work */
+  margin-bottom: 10px;
+} 
