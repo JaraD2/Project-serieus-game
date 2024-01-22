@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function hideOrShowHouses(option) {
-    const houses = [house1, house2, house3, house4];
+    const houses = [house1, house2, house3, house4, house5];
     houses.forEach((house) => {
       if (option === "hide") {
         house.classList.add("hidden");

@@ -1,26 +1,36 @@
 {
     "char1": {
-        "1": "Hi there, I'm Joe.",
-        "2": "I lost all my money on Fortnite skins.",
-        "3": "I'm so sad.",
-        "4": "I realized that I could not buy food anymore.",
-        "5": "I used to enjoy playing games, but now it feels like a constant struggle.",
-        "6": "My friends kept buying more in-game items, but I couldn't keep up.",
-        "7": "I felt left out and isolated from my friends because I couldn't afford the same things.",
-        "8": "I started regretting spending so much money on virtual items.",
-        "9": "I wish I had thought about the consequences before making those purchases.",
-        "10": "It's tough to see others enjoying the game while I'm struggling financially."
+        "1": "Hallo, ik ben Pieter.",
+        "2": "Ik ben verslaafd aan gamen.",
+        "3": "Zonder die items die ik in de game kocht, kon ik mijn vrienden niet bijhouden.",
+        "4": "Door de constante druk van mijn vrienden begon ik geld uit te geven.",
+        "5": "Ik heb nu veel items in de game gekocht.",
+        "6": "Ik was eigenlijk aan het sparen voor een autorijbewijs, maar ik heb nu geen geld meer.",
+        "7": "Ik kan nu niet meer spelen omdat ik extra moet werken om alsnog mijn rijbewijs te halen."
     },
     "char2" : {
-        "1" : "Char2 Hello",
-        "2" : "Char2 Hello2"
+        "1" : "Hallo, ik ben Martha.",
+        "2" : "Ik speelde vroeger te veel Candy Crush.",
+        "3" : "Na alle gratis levels te hebben gespeeld, moest ik betalen om verder te kunnen spelen.",
+        "4" : "Na anderhalf jaar spelen heb ik bijna geen geld meer over omdat ik alles aan Candy Crush uitgeef."
     },
     "char3" : {
-        "1" : "Char3 Hello",
-        "2" : "Char3 Hello2"
+        "1" : "Hallo, ik ben John.",
+        "2" : "Ik hou enorm van kattenplaatjes.",
+        "3" : "Ik ben een enorme verzamelaar van kattenplaatjes.",
+        "4" : "Ik had een app gevonden waar ik kattenplaatjes kon kopen.",
+        "5" : "Ze waren maar 1 euro per stuk, dus ik dacht dat het wel kon.",
+        "6" : "Na 2 jaar had ik bijna 500 kattenplaatjes gekocht zonder dat ik aan de prijs aan het denken was."
     },
     "char4" : {
-        "1" : "Char4 Hello",
-        "2" : "Char4 Hello2"
+        "1" : "Hallo, ik ben Klaas.",
+        "2" : "Ik zit nu al een paar maanden zonder werk thuis.",
+        "3" : "Ik leef nu op een uitkering.",
+        "4" : "Om de tijd te doden was ik op zoek naar een game.",
+        "5" : "Ik begon uiteindelijk met Clash of Clans.",
+        "6" : "Ik heb een erg goede deal gevonden voor maar 1 euro voor 10,000 edelstenen.",
+        "7" : "Maar ik bleef maar edelstenen kopen omdat ze zo goedkoop waren.",
+        "8" : "Ik heb nu nauwelijks genoeg geld om eten te kopen.",
+        "9" : "Op het moment dat ik dit schrijf, heb ik nog maar 10 euro over voor de rest van de maand."
     }
 }
