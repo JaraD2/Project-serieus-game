@@ -55,7 +55,6 @@ a,img {
   top: 40%;
 }
 a > span {
-
   transform: translateX(50%, -50%);
   font-size: 2.5vh;
   font-weight: 900;
