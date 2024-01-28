@@ -73,20 +73,10 @@ html {
 .exit > img {
   margin-top: 15px;
 }
-/* .exit {
-  position: absolute;
-  bottom: 25%;
-  left: 80%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-} */
 .exit > img {
   width: 180px;
   height: auto;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .back {
   position: absolute;
