@@ -23,6 +23,7 @@ body {
   -webkit-box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
   -moz-box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
   box-shadow:inset 0px 0px 0px 3px #1b1b1b27;
+  transition: all 0.2s ease-in-out;
 }
 
 .menu-button:hover {
