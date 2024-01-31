@@ -92,8 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.log("Error fetching JSON:", error);
     });
-
+  let timer = undefined;
   next.addEventListener("click", function () {
+    clearInterval(timer);
     i++;
     textAnimation(location);
   });
@@ -111,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const text = characterData[i].split(""); // splits the text at every character
       displayedText.textContent = ""; // Clear previous text
       let j = 0;
-      var timer = setInterval(function () {
+      timer = setInterval(function () {
         if (j < text.length) {
           displayedText.textContent += text[j];
           j++;
